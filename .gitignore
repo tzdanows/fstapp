@@ -49,4 +49,4 @@ temp/
 *.code-workspace
 .DS_Store
 Thumbs.db
-personalnotes.md
+notes/*

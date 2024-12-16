@@ -1,4 +1,4 @@
-# A Minimal Single Page Application Job Form
+# A Minimal Single Page Job Form
 ### **with a focus on milestone based development**
 
 ## Tech Stack
@@ -13,6 +13,7 @@
 ## Consisting of 3 primary data models/schemas:
 
 **Applicant (form structure & primary focus)**
+Endpoint testing: `http://localhost:5193/api/applicant`
 ```json
   "applicant": {
     "applicant_id": "123e4567-e89b-12d3-a456-426614174000",
@@ -30,18 +31,20 @@
 ```
 
 **Job (job details, categorization, source data)**
+Endpoint testing: `http://localhost:5193/api/jobs`
 ```json
   "job": {
     "job_id": "789e1234-e89b-12d3-a456-426614174222",
     "title": "Software Engineer",
     "department": "Engineering",
     "location": "Chicago, IL",
-    "description_url": "https://mht.dev/jobs/software-engineer",
+    "description_url": "https://fstapp.dev/jobs/{company}/{job-title}/{job-post-id}",
     "posted_date": "2024-12-01T00:00:00Z"
   }
 ```
 
 **Application (status oriented tracking)**
+Endpoint testing: `http://localhost:5193/api/application`
 ```json
   "application": {
     "application_id": "456e1237-e89b-12d3-a456-426614174111",
@@ -52,6 +55,8 @@
     "last_updated": "2024-12-15T12:00:00Z"
   }
 ```
+
+Swagger api docs at: `http://localhost:5193/`
 
 ---
 
@@ -82,42 +87,48 @@
 - Full-stack integration
 
 ### Milestone 6: Deployment
-- Cloud deployment (AWS/Azure)
+- Cloud deployment, options: (AWS/Azure/Alt)
 - CI/CD pipeline
 - Production environment setup
 
 ---
 
-### Prerequisites to interact
+### Prereqs to run
 - .NET Core SDK (latest)
 - Node.js & npm
 - Docker & Docker Compose
-- PostgreSQL
-
-### Local Development
+- PostgreSQL (running)
 
 1. Clone the repository:
-```bash
-git clone [repository-url]
-cd job-application-portal
-```
 
 2. Start the development environment:
 ```bash
+cd fstapp
+# local:
+cd Jobsite.API
+dotnet run
+# in another terminal:
+cd Frontend
+npm run dev
+
+# OR just (docker):
 docker-compose up
 ```
 
 3. Access the applications:
-- Frontend: http://localhost:3073
-- Backend API: http://localhost:5073
-- Swagger Docs: http://localhost:5073/swagger
+- Frontend: http://localhost:3193
+- Backend APIs: http://localhost:5193/api/(dependent)
+- Swagger Docs: http://localhost:5193
 
 ## sources:
 
 docs:
+- https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet
+- https://www.npgsql.org/doc/basic-usage.html
+- https://gist.github.com/bertt/b61b014c72c5a94b39c2d30497ba7f37
+- https://support.smartbear.com/swaggerhub/getting-started/
 - 
 
 when attempting to structure a milestone-based approach that worked for me, I considered:
 - https://www.atlassian.com/blog/project-management/project-milestones
-- https://www.indeed.com/career-advice/career-development/software-project-plan
 - 
