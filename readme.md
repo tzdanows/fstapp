@@ -13,7 +13,7 @@
 ## Consisting of 3 primary data models/schemas:
 
 **Applicant (form structure & primary focus)**
-Endpoint testing: `http://localhost:5193/api/applicant`
+`http://localhost:5193/api/applicant`
 ```json
   "applicant": {
     "applicant_id": "123e4567-e89b-12d3-a456-426614174000",
@@ -26,12 +26,12 @@ Endpoint testing: `http://localhost:5193/api/applicant`
     "portfolio_url": "https://tomdoe.dev",
     "github_url": "https://github.com/tomdoe",
     "linkedin_url": "https://linkedin.com/in/tomdoe",
-    "additional_notes": "" // cover letter field / special notes / etc..
+    "additional_notes": ""
   }
 ```
 
 **Job (job details, categorization, source data)**
-Endpoint testing: `http://localhost:5193/api/jobs`
+`http://localhost:5193/api/jobs`
 ```json
   "job": {
     "job_id": "789e1234-e89b-12d3-a456-426614174222",
@@ -44,7 +44,7 @@ Endpoint testing: `http://localhost:5193/api/jobs`
 ```
 
 **Application (status oriented tracking)**
-Endpoint testing: `http://localhost:5193/api/application`
+`http://localhost:5193/api/application`
 ```json
   "application": {
     "application_id": "456e1237-e89b-12d3-a456-426614174111",
