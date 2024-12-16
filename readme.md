@@ -13,6 +13,7 @@
 ## Consisting of 3 primary data models/schemas:
 
 **Applicant (form structure & primary focus)**
+
 `http://localhost:5193/api/applicant`
 ```json
   "applicant": {
@@ -31,6 +32,7 @@
 ```
 
 **Job (job details, categorization, source data)**
+
 `http://localhost:5193/api/jobs`
 ```json
   "job": {
@@ -44,6 +46,7 @@
 ```
 
 **Application (status oriented tracking)**
+
 `http://localhost:5193/api/application`
 ```json
   "application": {
